@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 
@@ -14,6 +15,11 @@ export default function Post({ post }) {
       </p>
       <p className="mb-8 text-xl font-bold">{post.title}</p>
       <p className="px-10">{post.body}</p>
+      <Link href="/blog-page">
+        <div className="flex cursor-pointer mt-12">
+          <span>Back to blog-page</span>
+        </div>
+      </Link>
     </Layout>
   );
 }
